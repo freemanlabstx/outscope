@@ -1,0 +1,24 @@
+<div class="py-16 max-w-2xl m-auto text-center flex flex-col items-center justify-center space-y-8">
+  <h1>
+    Find local businesses for your marketing campaigns <span class="highlighter-text">in minutes</span>
+  </h1>
+
+  <p class="text-gray-700 dark:text-gray-200 leading-normal text-xl">
+    Outscope allows you to find local businesses quickly and easily. You can search by location, category, and more. Once you find the businesses you're looking for, you can export them with no limits.
+  </p>
+
+  <div class="flex flex-col items-center md:flex-row">
+    <div>
+      <%= link_to "Create an account", new_user_registration_path, class: "btn btn-link text-primary lg:mr-4 mr-0 lg:mb-0 mb-4" %>
+      <%= link_to "Sign in", new_user_session_path, class: "btn btn-primary lg:mr-4 mr-0 lg:mb-0 mb-4" %>
+    </div>
+  </div>
+
+  <%= link_to image_url("report.png"), target: "_blank", class: "dark:hidden" do %>
+    <%= image_tag "report.png", class: "rounded shadow" %>
+  <% end %>
+
+  <%= link_to image_url("report.png"), target: "_blank", class: "hidden dark:block" do %>
+    <%= image_tag "report-dark.png", class: "rounded shadow" %>
+  <% end %>
+</div>

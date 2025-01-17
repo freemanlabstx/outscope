@@ -1,0 +1,5 @@
+<%= strip_tags t(".header_html", title: @report.title) %>
+
+<%= t(".description_html") %>
+
+<%= t(".view_report") %>: <%= report_url(@report.to_param) %>

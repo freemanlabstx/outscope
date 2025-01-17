@@ -1,0 +1,40 @@
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.transition {
+  transition: ease-in-out 0.2s all;
+}
+
+/* Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* highlighter text effect - yellow bg, slightly crooked text */
+.highlighter-text {
+  background-color: #FFD700;
+  transform: rotate(-1deg);
+  display: inline-block;
+  padding: 0.1em 0.25em;
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+  .highlighter-text {
+    color: #000;
+  }
+}
+
