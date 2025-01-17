@@ -103,4 +103,4 @@ gem "flipper-ui", "~> 1.2"
 
 gem "markdown-rails", "~> 2.1"
 
-gem "ruby-openai", "~> 6.5"
+gem "ruby-openai", "~> 7.3"
