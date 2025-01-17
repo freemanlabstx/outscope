@@ -1,0 +1,20 @@
+---
+application_name: Outscope
+business_name: Freeman Labs LLC
+business_address: |-
+  251 Solitude Drive
+  San Marcos, TX 78666
+domain: outscope.app
+support_email: support@outscope.app
+default_from_email: Outscope <support@outscope.app>
+background_job_processor: solid_queue
+email_provider: postmark
+personal_accounts: false
+apns: false
+fcm: false
+integrations:
+omniauth_providers:
+payment_processors:
+- stripe
+multitenancy:
+gems:

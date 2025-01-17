@@ -1,0 +1,79 @@
+<div class="flex flex-wrap my-4 lg:px-4">
+  <div class="w-full">
+    <div class="p-4 bg-white border border-gray-200 dark:bg-gray-900 dark:border-gray-700 rounded-lg lg:p-10">
+
+      <div class="sm:flex items-center justify-between mb-10">
+        <h1 class="flex-1 h3">
+          <%= t(".title") %>
+        </h1>
+
+        <div>
+          <%= link_to new_report_path, class: "btn btn-primary flex items-center space-x-2" do %>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+              <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
+            </svg>
+
+            <%= content_tag :span do %>
+              <%= t(".create") %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+
+      <table class="w-full">
+        <thead>
+          <tr class="text-left">
+            <th class="p-3">
+              Title
+            </th>
+            <th class="p-3 hidden sm:table-cell">
+              Status
+            </th>
+            <th class="p-3 hidden sm:table-cell">
+              Created at
+            </th>
+            <th class="table-cell">
+              Actions
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @reports.each do |report| %>
+            <tr class="border-t border-gray-100 group">
+              <td class="p-3">
+                <%= link_to report, class: "flex items-center" do %>
+                  <%= tag.span report.title, class: "text-gray-900 dark:text-gray-100 font-semibold text-sm no-underline hover:text-primary" %>
+                <% end %>
+              </td>
+
+              <td class="p-3 hidden sm:table-cell">
+                <%= status_pill report.status %>
+              </td>
+
+              <td class="p-3 hidden sm:table-cell">
+                <%= report.created_at.strftime("%B %d, %Y") %>
+              </td>
+
+              <td class="tabel-cell">
+                <%= link_to "View", report %>
+              </td>
+            </tr>
+          <% end %>
+          <% if @reports.empty? %>
+            <tr class="border-t border-gray-100 group">
+              <%= t(".empty") %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <% if @pagy.pages > 1 %>
+        <div class="my-6 text-center">
+          <%== pagy_nav(@pagy) %>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>

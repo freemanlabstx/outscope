@@ -1,0 +1,55 @@
+@layer components {
+  .pill {
+    @apply rounded-full py-1 px-4 bg-gray-400 text-xs inline-block text-gray-700 font-bold leading-normal mr-2;
+  }
+
+  .pill-uppercase {
+    @apply uppercase;
+  }
+
+  .pill-small {
+    @apply px-3 text-sm;
+
+    height: 32px;
+    line-height: 32px;
+  }
+
+  .pill-large {
+    @apply text-base px-6;
+
+    height: 48px;
+    line-height: 48px;
+  }
+
+  .pill-primary {
+    @apply bg-primary-600 text-white focus:ring-primary-500;
+
+    &.pill-outline {
+      @apply bg-transparent border border-primary-500 text-primary-500 shadow-none;
+    }
+  }
+
+  .pill-secondary {
+    @apply bg-green-600 text-white focus:ring-green-500;
+
+    &.pill-outline {
+      @apply bg-transparent border border-green-500 text-green-600 shadow-none;
+    }
+  }
+
+  .pill-tertiary {
+    @apply bg-neutral-800 text-white focus:ring-neutral-700;
+
+    &.pill-outline {
+      @apply bg-transparent border border-neutral-500 text-neutral-800 dark:text-neutral-100 shadow-none;
+    }
+  }
+
+  .pill-danger {
+    @apply bg-red-600 text-white focus:ring-red-500;
+
+    &.pill-outline {
+      @apply bg-transparent border border-red-500 text-red-500 shadow-none;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+UI
+===
+- Landing page details
+
+AI
+===
+- Integrate Vercel AI SDK on frontend
+- Deploy Langchain-powered Workers app for AI response
+
+Backend
+===
+- Send email notification on report completion
+- Key limits of report based off of plan
+- Should check Yelp limits
+
+Post-MVP
+===
+- Integrate Google Places API
+  - https://developers.google.com/maps/documentation/places/web-service/overview

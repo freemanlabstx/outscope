@@ -1,0 +1,28 @@
+<div class="flex">
+  <div class="my-4 w-full">
+    <div class="w-full px-4">
+      <div class="p-4 bg-white dark:bg-gray-900 lg:p-10 space-y-4">
+        <div class="sm:flex flex-wrap items-center justify-between mb-1 space-y-4">
+          <div class="flex items-center space-x-3">
+            <h1 class="h3"><%= @report.title %></h1>
+            <%= report_type_pill @report.report_type %>
+          </div>
+  
+          <div class="flex items-center space-x-2">
+            <button class="btn btn-primary hidden">
+              Show AI Chat
+            </button>
+          </div>
+        </div>
+  
+        <div id="ai-app"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script id="ai-config" type="application/json">
+  {"api_token": "<%= @api_token.token %>", "user_id": "<%= current_user.to_param %>"}
+</script>
+
+<%= javascript_include_tag "ai" %>

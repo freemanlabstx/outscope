@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="<%= class_names("h-full antialiased", "dark": current_user&.dark_theme?) %>" lang="<%= I18n.locale %>">
+  <head>
+    <title>
+      <% if content_for?(:title) %>
+        <%= yield :title %> |
+      <% end %>
+      <%= Jumpstart.config.application_name %>
+    </title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= viewport_meta_tag %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
+    <%# Be sure to add your own custom favicons %>
+    <%= render "shared/favicons" %>
+    <%= render "shared/payments_dependencies" %>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <%= meta_image(yield(:meta_image)) %>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@kristianf_" />
+    <meta name="twitter:title" content="Outscope" />
+    <meta name="twitter:description" content="Find contact info local businesses for your marketing campaigns in minutes" />
+    <meta name="twitter:image:alt" content="Outscope" />
+    <meta name="twitter:url" content="https://outscope.app" />
+    <meta name="twitter:domain" content="outscope.app" />
+    <%= yield :head %>
+  </head>
+  <body class="h-full font-sans antialiased font-normal leading-normal bg-white dark:bg-gray-900 dark:text-gray-50">
+    <div class="main flex flex-col">
+      <header>
+        <%= render partial: "shared/flash" %>
+        <%= render partial: "shared/navbar" %>
+      </header>
+      <main class="px-3 lg:px-0 h-full">
+        <%= yield %>
+      </main>
+    </div>
+    <%= render partial: "shared/footer" unless turbo_native_app? %>
+    <ninja-keys data-controller="command-palette" hideBreadcrumbs></ninja-keys>
+  </body>
+</html>
