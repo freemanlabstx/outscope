@@ -98,7 +98,7 @@ eval_gemfile "Gemfile.jumpstart"
 gem "graphlient", "~> 0.8.0"
 
 gem "flipper", "~> 1.2"
-gem "flipper-active_record", "~> 1.2"
+gem "flipper-active_record", "~> 1.3"
 gem "flipper-ui", "~> 1.2"
 
 gem "markdown-rails", "~> 2.1"
