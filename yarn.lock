@@ -458,9 +458,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/typography@npm:^0.5.0":
-  version: 0.5.10
-  resolution: "@tailwindcss/typography@npm:0.5.10"
+"@tailwindcss/typography@npm:^0.5.16":
+  version: 0.5.16
+  resolution: "@tailwindcss/typography@npm:0.5.16"
   dependencies:
     lodash.castarray: "npm:^4.4.0"
     lodash.isplainobject: "npm:^4.0.6"
@@ -468,7 +468,7 @@ __metadata:
     postcss-selector-parser: "npm:6.0.10"
   peerDependencies:
     tailwindcss: "*"
-  checksum: 10c0/0fa9c96bf091fb79fdc39a0244027b3891e9205f714197c8196e7ba2305523ce8695d14b912366de9b77d4b1d3a742fb7f9bc9bb633fddc7c7f13374b41075d2
+  checksum: 10c0/35a7387876810c23c270a23848b920517229b707c8ead6a63c8bb7d6720a62f23728c3117f0a93b422a66d1e5ee9c7ad8a6c3f0fbf5255b535c0e4971ffa0158
   languageName: node
   linkType: hard
 
@@ -1411,7 +1411,7 @@ __metadata:
     "@rails/request.js": "npm:^0.0.9"
     "@tailwindcss/aspect-ratio": "npm:^0.4.0"
     "@tailwindcss/forms": "npm:^0.5.0"
-    "@tailwindcss/typography": "npm:^0.5.0"
+    "@tailwindcss/typography": "npm:^0.5.16"
     ai: "npm:^3.0.22"
     autoprefixer: "npm:^10.4.0"
     chokidar: "npm:^3.5.2"
